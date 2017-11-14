@@ -122,7 +122,10 @@
 // Create Page
 
 .main-container {
-  display: flex;
+  position: relative;
+  right: 240px;
+  bottom: 150px;
+  align-text: center;
 }
 
 .main-container h1 {
@@ -140,10 +143,6 @@
   color: rgb(255, 255, 255);
   opacity: 0.6;
   margin-bottom: 30px;
-}
-
-.col-xs-6 {
-  margin-right: 40px;
 }
 
 #create-form {

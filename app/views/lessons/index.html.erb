@@ -1,2 +1,58 @@
 <h1>Lessons#index</h1>
-<p>Find me in app/views/lessons/index.html.erb</p>
+
+<%= render 'pages/navbar' %>
+
+<div class="container">
+  <div class="row">
+    <% @lessons.each do  |lesson| %>
+    <div class="col-sm-offset-4 col-sm-4">
+      <div class="card" style="background-color: white;">
+       <div class="product-controls">
+        <h4 class="card-name"><%= lesson.title %></h4>
+        <h5 class="card-location"><%= lesson.location %></h5>
+        <p class="card-description"><%= lesson.description %></p>
+        <a class='btn btn-primary btn-book' href='#' >Book Now</a>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

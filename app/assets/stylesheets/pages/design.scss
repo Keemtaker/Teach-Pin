@@ -64,36 +64,6 @@
 
 // CARDS
 
-.card {
-  position: relative;
-  display: inline-block;
-  width: 360px;
-  margin-bottom: 16px;
-  height: 273px;
-  background-color: #fff;
-  transition: all .15s ease-out;
-  box-sizing: content-box;
-  border-radius: 4px;
-  border: 6px solid #f7f8fa;
-  text-align: left;
-  vertical-align: top;
-  overflow: hidden;
-}
-
-.card-name {
-  margin-left: 120px;
-  margin-top: 30px;
-}
-
-.card-location {
-  margin-left: 120px;
-
-}
-
-.card-description {
-  margin-left: 120px;
-  margin-top: 40px;
-}
 
 // AVATAR
 .avatar {

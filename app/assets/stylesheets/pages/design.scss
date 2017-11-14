@@ -1,0 +1,203 @@
+
+// BUTTONS
+// Standard Buttons
+.btn-teachpin {
+  color: white;
+  border-color: #3E7CB1;
+  text-color: white;
+  border-radius: 10px;
+  font-weight: 100px;
+  font-family: 'Varela Round', sans-serif; font-size: 15px;
+  text-decoration: none;
+}
+
+.btn-create {
+  color: white;
+  border-color: #3E7CB1;
+  text-color: white;
+  border-radius: 10px;
+  font-weight: 100px;
+  font-family: 'Varela Round', sans-serif; font-size: 15px;
+  text-decoration: none;
+}
+
+// Book Now Button
+.btn-book {
+  font-family: 'Varela Round', sans-serif;
+  color: white;
+  border-color: #3E7CB1;
+  text-color: white;
+  border-radius: 10px;
+  font-weight: 100px;
+  font-family: 'Varela Round', sans-serif; font-size: 15px;
+  text-decoration: none;
+  margin-top: 70px;
+  margin-left: 220px;
+}
+
+// Category Button
+.btn-category {
+  font-family: 'Varela Round', sans-serif;  font-size: 15px;
+  line-height: 18px;
+  letter-spacing: 0.2px;
+  padding-top: 6px;
+  padding-bottom: 6px;
+  color: #484848;
+  background: #D0D0D0;
+  border: 1px solid #dce0e0;
+  border-radius: 4px;
+  cursor: pointer;
+  display: inline-block;
+  outline: none;
+  padding-left: 12px;
+  padding-right: 12px;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  width: auto;
+}
+.btn-category:hover {
+  background: #D0D0D0;
+  box-shadow: 1px;
+  color: #484848;
+}
+
+// CARDS
+
+.card {
+  position: relative;
+  display: inline-block;
+  width: 360px;
+  margin-bottom: 16px;
+  height: 273px;
+  background-color: #fff;
+  transition: all .15s ease-out;
+  box-sizing: content-box;
+  border-radius: 4px;
+  border: 6px solid #f7f8fa;
+  text-align: left;
+  vertical-align: top;
+  overflow: hidden;
+}
+
+.card-name {
+  margin-left: 120px;
+  margin-top: 30px;
+}
+
+.card-location {
+  margin-left: 120px;
+
+}
+
+.card-description {
+  margin-left: 120px;
+  margin-top: 40px;
+}
+
+// AVATAR
+.avatar {
+  border-radius: 50px;
+}
+
+// BANNER
+.banner {
+  color: white;
+  text-align: center;
+  height: 100vh;
+  /* if you have a 70px navbar => height: calc(100vh - 70px); */
+  background-size: cover !important;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+}
+
+.banner h1 {
+  font-family: 'Varela Round', sans-serif;
+  font-size: 50px;
+  font-weight: bold;
+  text-shadow: 0px 1px rgba(0, 0, 0, 0.2);
+}
+.banner p {
+  font-family: 'Varela Round', sans-serif;
+  font-size: 25px;
+  font-weight: lighter;
+  color: rgb(255, 255, 255);
+  opacity: 0.6;
+  margin-bottom: 30px;
+
+}
+
+// NAVBAR
+/* Main navbar */
+.navbar-wagon {
+  box-shadow: 0 1px 5px 0 rgba(0,0,0,0.07),0 1px 0 0 rgba(0,0,0,0.03);
+  background: white;
+  transition: all 0.3s ease;
+  height: 70px;
+  padding: 0px 30px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* Logo */
+.navbar-wagon-brand img {
+  height: 50px;
+}
+
+/* User Avatar */
+.navbar-wagon .avatar {
+  height: 35px;
+  width: 35px;
+  border-radius: 50%;
+}
+
+/* Right section */
+.navbar-wagon-right {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 10px;
+}
+
+/* Basic navbar item */
+.navbar-wagon-item {
+  cursor: pointer;
+  padding: 0 20px;
+}
+
+/* Dropdown menu */
+.navbar-wagon-dropdown-menu {
+  margin-top: 15px;
+  box-shadow: 1px 1px 4px #E6E6E6;
+  border-color: #E6E6E6;
+}
+.navbar-wagon-dropdown-menu li > a {
+  transition: color 0.3s ease;
+  font-weight: lighter !important;
+  color: #999999 !important;
+  font-size: 15px !important;
+  line-height: 22px !important;
+  padding: 10px 20px;
+}
+.navbar-wagon-dropdown-menu li > a:hover {
+  background: transparent !important;
+  color: black !important;
+}
+.navbar-wagon-dropdown-menu:before {
+  content: ' ';
+  height: 10px;
+  width: 10px;
+  position: absolute;
+  right: 10px;
+  top: -6px;
+  background-color: white;
+  transform: rotate(45deg);
+  border-left: 1px solid #E6E6E6;
+  border-top: 1px solid #E6E6E6;
+}
+
+
+

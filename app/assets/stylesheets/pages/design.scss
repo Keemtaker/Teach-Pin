@@ -58,6 +58,10 @@
   color: #484848;
 }
 // CARDS
+
+.row {
+  padding: 15px;
+}
 .card {
   height: 175px;
   text-shadow: 0 1px 3px rgba(0,0,0,0.6);
@@ -65,6 +69,7 @@
   background-position: center;
   color: white;
   position: relative;
+  margin: 10px;
 }
 .card-user {
   position: absolute;
@@ -74,6 +79,8 @@
   border-radius: 50%;
 }
 .card-category {
+  color: white;
+  font-weight: bold;
   position: absolute;
   top: 10px;
   left: 10px;
@@ -81,8 +88,9 @@
   text-transform: uppercase;
 }
 .card-description {
+  color: white;
   position: absolute;
-  bottom: 10px;
+  bottom: 70px;
   left: 10px;
 }
 .card-description h2 {
@@ -93,6 +101,15 @@
   opacity: 0.7;
   font-weight: lighter;
 }
+
+.card-price {
+  color: white;
+  position: absolute;
+  top: 140px;
+  left: 260px;
+  font-size: 14px;
+}
+
 .card-link {
   position: absolute;
   top: 0;

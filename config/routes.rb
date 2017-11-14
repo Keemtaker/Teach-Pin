@@ -1,8 +1,7 @@
 Rails.application.routes.draw do
 
   devise_for :users
-
-  get "design", to: "pages#design"
+  get "home", to: "pages#home"
   root 'pages#home'
   resources :lessons  do
     resources :booking, only: [:create, :update, :destroy]

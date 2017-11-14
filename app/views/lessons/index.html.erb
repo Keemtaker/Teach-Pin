@@ -1,22 +1,26 @@
-<h1>Lessons#index</h1>
-
-<%= render 'pages/navbar' %>
+<h3>Choose a Lesson and change your life!</h3>
 
 <div class="container">
   <div class="row">
     <% @lessons.each do  |lesson| %>
-    <div class="col-sm-offset-4 col-sm-4">
-      <div class="card" style="background-color: white;">
-       <div class="product-controls">
-        <h4 class="card-name"><%= lesson.title %></h4>
-        <h5 class="card-location"><%= lesson.location %></h5>
-        <p class="card-description"><%= lesson.description %></p>
-        <a class='btn btn-primary btn-book' href='#' >Book Now</a>
-        <% end %>
+      <div class="col-xs-12 col-sm-4">
+        <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('https://kitt.lewagon.com/placeholder/cities/shanghai');">
+    <%= link_to lesson_path(lesson) do %>
+          <div class="card-category"><%= lesson.title %></div>
+          <div class="card-description">
+            <h2><%= lesson.description %></h2>
+            <p><%= lesson.location %></p>
+          </div>
+          <img class="card-user" src="https://kitt.lewagon.com/placeholder/users/tgenaitay">
+          <a class="card-link" href="#" ></a>
+        </div>
       </div>
-    </div>
+      <% end %>
+    <% end %>
   </div>
 </div>
+
+
 
 
 

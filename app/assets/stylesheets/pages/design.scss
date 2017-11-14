@@ -1,13 +1,23 @@
 // BUTTONS
 // Standard Buttons
 .btn-teachpin {
+  padding: 30px;
   color: white;
-  border-color: #3E7CB1;
+  border-color: #003F7F;
+  background-color: #003F7F;
+  opacity: 0.9;
   text-color: white;
   border-radius: 10px;
   font-weight: 100px;
   font-family: 'Varela Round', sans-serif; font-size: 15px;
   text-decoration: none;
+
+  .btn-teachpin:hover {
+    text-decoration: none;
+    background-color: #003F7F;
+    opacity: 1;
+  }
+
 }
 .btn-create {
   color: white;
@@ -70,12 +80,13 @@
   color: white;
   position: relative;
   margin: 10px;
+  border-radius: 10px;
 }
 .card-user {
   position: absolute;
   right: 10px;
   top: 10px;
-  width: 40px;
+  width: 30px;
   border-radius: 50%;
 }
 .card-category {
@@ -98,7 +109,7 @@
 }
 .card-description p {
   font-size: 14px;
-  opacity: 0.7;
+  opacity: 0.8;
   font-weight: lighter;
 }
 
@@ -161,14 +172,14 @@
   height: 100vh;
   position: sticky !important; /* !important to override Gmaps inline CSS */
   top: 0 !important;
-
-
-// BANNER
-
 }
 
-
 // BANNER
+
+
+
+
+// BACKGROUND IMAGE
 .banner {
   width: 100%;
   padding: 0 7%;
@@ -234,9 +245,16 @@
   padding: 0 20px;
 }
 .navbar-btn {
-  color: #A7ABB0;
   text-decoration: none;
+  color: #A7ABB0;
 }
+
+.navbar-btn:hover {
+  text-decoration: none;
+  color: #A7ABB0;
+  font-weight: lighter;
+}
+
 /* Dropdown menu */
 .navbar-wagon-dropdown-menu {
   margin-top: 15px;
@@ -278,6 +296,7 @@
   padding: 0px 50px;
   color: rgba(0,0,0,0.3);
 }
+
 .footer-links {
   display: flex;
   align-items: center;

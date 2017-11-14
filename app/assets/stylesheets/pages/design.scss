@@ -101,16 +101,21 @@
 }
 
 // BANNER
+.container {
+  margin: 0 auto;
+  width: 970px;
+}
+
 .banner {
   color: white;
   text-align: center;
   height: 100vh;
-  /* if you have a 70px navbar => height: calc(100vh - 70px); */
+  width: 100%;
   background-size: cover !important;
   display: flex;
   align-items: center;
   justify-content: center;
-
+  margin: 0px;
 }
 
 .banner h1 {

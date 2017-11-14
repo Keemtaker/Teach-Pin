@@ -80,12 +80,13 @@
   color: white;
   position: relative;
   margin: 10px;
+  border-radius: 10px;
 }
 .card-user {
   position: absolute;
   right: 10px;
   top: 10px;
-  width: 40px;
+  width: 30px;
   border-radius: 50%;
 }
 .card-category {
@@ -108,7 +109,7 @@
 }
 .card-description p {
   font-size: 14px;
-  opacity: 0.7;
+  opacity: 0.8;
   font-weight: lighter;
 }
 

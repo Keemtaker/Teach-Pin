@@ -5,6 +5,9 @@ Rails.application.routes.draw do
   get "home", to: "pages#home"
   get "create", to: "pages#create"
 
+  #creating dashboard
+  get "dashboard", to: "lessons#dashboard"
+
 
   get "design", to: "pages#design"
   root 'pages#home'

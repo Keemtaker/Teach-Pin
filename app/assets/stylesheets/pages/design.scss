@@ -65,52 +65,34 @@
 // CARDS
 
 .card {
-  height: 175px;
-  text-shadow: 0 1px 3px rgba(0,0,0,0.6);
-  background-size: cover !important;
-  background-position: center;
-  color: white;
   position: relative;
+  display: inline-block;
+  width: 360px;
+  margin-bottom: 16px;
+  height: 273px;
+  background-color: #fff;
+  transition: all .15s ease-out;
+  box-sizing: content-box;
+  border-radius: 4px;
+  border: 6px solid #f7f8fa;
+  text-align: left;
+  vertical-align: top;
+  overflow: hidden;
 }
-.card-user {
-  position: absolute;
-  right: 10px;
-  top: 10px;
-  width: 40px;
-  border-radius: 50%;
+
+.card-name {
+  margin-left: 120px;
+  margin-top: 30px;
 }
-.card-category {
-  position: absolute;
-  top: 10px;
-  left: 10px;
-  font-size: 15px;
-  text-transform: uppercase;
+
+.card-location {
+  margin-left: 120px;
+
 }
+
 .card-description {
-  position: absolute;
-  bottom: 10px;
-  left: 10px;
-}
-.card-description h2 {
-  font-size: 24px;
-}
-.card-description p {
-  font-size: 14px;
-  opacity: 0.7;
-  font-weight: lighter;
-}
-.card-link {
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  right: 0;
-  width: 100%;
-  z-index: 2;
-  background: black;
-  opacity: 0;
-}
-.card-link:hover {
-  opacity: 0.1;
+  margin-left: 120px;
+  margin-top: 40px;
 }
 
 // AVATAR
@@ -119,23 +101,21 @@
 }
 
 // BANNER
-
-
+.container {
+  margin: 0 auto;
+  width: 970px;
+}
 
 .banner {
-  width: 100%;
-  padding: 0 7%;
-  display: table;
-  margin: 0;
-  max-width: none;
-  background-color: #373B44;
-  height: 100vh;
   color: white;
   text-align: center;
+  height: 100vh;
+  width: 100%;
   background-size: cover !important;
   display: flex;
   align-items: center;
   justify-content: center;
+  margin: 0px;
 }
 
 .banner h1 {
@@ -169,7 +149,7 @@
 
 /* Logo */
 .navbar-wagon-brand img {
-  height: 60px;
+  height: 50px;
 }
 
 /* User Avatar */
@@ -184,21 +164,13 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-
-  text-decoration: none;
+  margin: 10px;
 }
 
 /* Basic navbar item */
 .navbar-wagon-item {
-  text: 10px;
   cursor: pointer;
   padding: 0 20px;
-
-}
-
-.navbar-btn {
-  color: #A7ABB0;
-  text-decoration: none;
 }
 
 /* Dropdown menu */

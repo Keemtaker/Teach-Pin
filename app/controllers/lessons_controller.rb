@@ -32,6 +32,11 @@ class LessonsController < ApplicationController
     @lesson.destroy
   end
 
+  #creating dashboard logic
+  def dashboard
+   @lessons = current_user.lessons
+  end
+
   private
 
   def set_lesson

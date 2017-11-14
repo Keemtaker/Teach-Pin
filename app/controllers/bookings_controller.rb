@@ -1,5 +1,4 @@
 class BookingsController < ApplicationController
-  after_action redirect_to lessons_path(@booking)
   before_action :set_lesson, only: [:create, :update]
 
   def create

@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link href="https://fonts.googleapis.com/css?family=Varela+Round" rel="stylesheet">
+  <meta charset="UTF-8">
+  <title>Document</title>
+</head>
+<body>
+
+  <div class="navbar-wagon">
+    <!-- Logo -->
+    <a href="/" class="navbar-wagon-brand">
+      <%= image_tag "logo.png", {id: "logo"}%>
+    </a>
+
+    <!-- Right Navigation -->
+    <div class="navbar-wagon-right hidden-xs hidden-sm">
+
+      <a href="" class="navbar-wagon-item btn btn-primary btn-teachpin">Create Lesson</a>
+      <a href="" class="navbar-wagon-item btn btn-primary btn-teachpin">Login</a>
+      <a href="" class="navbar-wagon-item btn btn-primary btn-teachpin">Sign up</a>
+
+
+      <!-- Profile picture with dropdown list -->
+      <div class="navbar-wagon-item">
+        <div class="dropdown">
+          <% avatar_url = current_user.facebook_picture_url || "http://placehold.it/30x30" %>
+          <%= image_tag avatar_url, class: "avatar dropdown-toggle", id: "navbar-wagon-menu", "data-toggle" => "dropdown" %>
+
+          <!-- <img src="https://kitt.lewagon.com/placeholder/users/ssaunier" class="avatar dropdown-toggle" id="navbar-wagon-menu" data-toggle="dropdown"> -->
+          <ul class="dropdown-menu dropdown-menu-right navbar-wagon-dropdown-menu">
+            <li><a href="#">Profile</a></li>
+            <li><a href="#">My Lessons</a></li>
+            <li><a href="#">Log Out</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- Dropdown appearing on mobile only -->
+    <div class="navbar-wagon-item hidden-md hidden-lg">
+      <div class="dropdown">
+        <i class="fa fa-bars dropdown-toggle" data-toggle="dropdown"></i>
+        <ul class="dropdown-menu dropdown-menu-right navbar-wagon-dropdown-menu">
+          <li><a href="#">Create Lesson</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+
+  <h1>Design Page</h1>
+  <h2>Buttons</h2>
+  <div>
+    <ul>
+      <a class='btn btn-primary btn-teachpin' href='#' >Login</a>
+      <a class='btn btn-primary btn-teachpin' href='#' >Sign up</a>
+      <a class='btn btn-primary btn-teachpin' href='#' >Create</a>
+      <a class='btn btn-primary btn-teachpin' href='#' >Book</a>
+      <a class='btn btn-primary btn-category' href='#' >Category</a>
+
+    </ul>
+  </div>
+
+  <h2>Cards</h2>
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-offset-4 col-sm-4">
+        <div class="card" style="background-color: white;"%>
+         <div className="product-controls">
+          <h4 class="card-name">Teacher Name</h4>
+          <h5 class="card-location">Location</h5>
+          <p class="card-description">Guitar Teacher</p>
+          <a class='btn btn-primary btn-book' href='#' >Book Now</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id="banner">
+    <h2>Banner</h2>
+    <div class="banner" style="background-image: linear-gradient(-225deg, rgba(0,101,168,0.6) 0%, rgba(0,36,61,0.6) 50%), url('https://picsum.photos/200/300/?random');">
+      <div class="banner-content">
+        <h1>Welcome to TeachPin</h1>
+        <p>Easy and Simple teaching from professionals</p>
+
+
+        <ul>
+          <a class='btn btn-primary btn-category' href='#' >Music</a>
+          <a class='btn btn-primary btn-category' href='#' >Coding</a>
+          <a class='btn btn-primary btn-category' href='#' >School</a>
+          <a class='btn btn-primary btn-category' href='#' >Craft</a>
+          <a class='btn btn-primary btn-category' href='#' >Arts</a>
+        </ul>
+
+      </div>
+    </div>
+  </div>
+</body>
+</html>
+

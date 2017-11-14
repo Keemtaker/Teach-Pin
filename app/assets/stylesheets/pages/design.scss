@@ -1,13 +1,23 @@
 // BUTTONS
 // Standard Buttons
 .btn-teachpin {
+  padding: 30px;
   color: white;
-  border-color: #3E7CB1;
+  border-color: #003F7F;
+  background-color: #003F7F;
+  opacity: 0.9;
   text-color: white;
   border-radius: 10px;
   font-weight: 100px;
   font-family: 'Varela Round', sans-serif; font-size: 15px;
   text-decoration: none;
+
+  .btn-teachpin:hover {
+    text-decoration: none;
+    background-color: #003F7F;
+    opacity: 1;
+  }
+
 }
 .btn-create {
   color: white;
@@ -234,9 +244,16 @@
   padding: 0 20px;
 }
 .navbar-btn {
-  color: #A7ABB0;
   text-decoration: none;
+  color: #A7ABB0;
 }
+
+.navbar-btn:hover {
+  text-decoration: none;
+  color: #A7ABB0;
+  font-weight: lighter;
+}
+
 /* Dropdown menu */
 .navbar-wagon-dropdown-menu {
   margin-top: 15px;
@@ -278,6 +295,7 @@
   padding: 0px 50px;
   color: rgba(0,0,0,0.3);
 }
+
 .footer-links {
   display: flex;
   align-items: center;

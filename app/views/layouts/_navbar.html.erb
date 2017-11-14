@@ -1,12 +1,6 @@
 
 <!-- NAVBAR -->
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>Document</title>
-</head>
-<body>
+
    <div class="navbar-wagon">
     <!-- Logo -->
     <a href="/" class="navbar-wagon-brand">
@@ -27,7 +21,7 @@
           <img src="https://kitt.lewagon.com/placeholder/users/ssaunier" class="avatar dropdown-toggle" id="navbar-wagon-menu" data-toggle="dropdown">
           <ul class="dropdown-menu dropdown-menu-right navbar-wagon-dropdown-menu">
             <li><a href="#">Profile</a></li>
-            <li><a href="#">My Lessons</a></li>
+            <li><%= link_to "My Dashboard", dashboard_path %></li>
             <li><a href="#">Log Out</a></li>
           </ul>
         </div>
@@ -44,5 +38,9 @@
       </div>
     </div>
   </div>
+
+
+
 </body>
 </html>
+

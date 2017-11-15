@@ -5,11 +5,11 @@
     <% @lessons.each do  |lesson| %>
     <div class="col-xs-12 col-sm-4">
       <% if lesson.category == "school" %>
-        <% bg_path = cl_image_path @product.photo.path, height: 300, width: 400, crop: :fill %>
+      <% bg_path = image_path 'school.png'  %>
       <% elsif lesson.category == "coding" %>
-        <% bg_path = cl_image_path @product.photo.path, height: 300, width: 400, crop: :fill %>
+      <% bg_path = image_path 'coding.png'  %>
       <% elsif lesson.category == "arts" %>
-        <% bg_path = image_path cl_image_path @product.photo.path, height: 300, width: 400, crop: :fill  %>
+      <% bg_path = image_path 'arts.png'  %>
       <% end %>
       <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('<%= bg_path %>');">
         <%= link_to lesson_path(lesson) do %>
@@ -25,48 +25,41 @@
 
         </div>
 
-          <img class="card-user" src="https://kitt.lewagon.com/placeholder/users/tgenaitay">
-            <a class="card-link" href="#" ></a>
-          </div>
-        </div>
-        <% end %>
-        <% end %>
+        <img class="card-user" src="https://kitt.lewagon.com/placeholder/users/tgenaitay">
+        <a class="card-link" href="#" ></a>
       </div>
     </div>
+    <% end %>
+    <% end %>
+    <div>
+      <div id="map" style="width: 35%; height: 100vh;"></div>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+  <% content_for(:after_js) do %>
+    <script>
+      var handler = Gmaps.build('Google');
+      handler.buildMap({ internal: { id: 'map' } }, function() {
+      markers = handler.addMarkers(<%= raw @hash.to_json %>);
+      handler.bounds.extendWith(markers);
+      handler.fitMapToBounds();
+      if (markers.length == 0) {
+      handler.getMap().setZoom(2);
+      } else if (markers.length == 1) {
+        handler.getMap().setZoom(14);
+        }
+      });
+    </script>
+<% end %>
+</div>
+</div>
+<div>
+  <% content_for(:after_js) do %>
+  <%= javascript_tag do %>
+  const coord = <%= raw @flat_coordinates.to_json %>;
+  alert('Flat coordinates are ' + coord.lat + ', ' + coord.lng);
+  <% end %>
+  <% end %>
+</div>
+</div>
 
 
 

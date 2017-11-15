@@ -1,5 +1,9 @@
 class Lesson < ApplicationRecord
+
   belongs_to :user
+
+  geocoded_by :location
+  after_validation :geocode, if: :location_changed?
 
   validates :description, presence: true, length: {minimum: 15}
   validates :location, presence: true

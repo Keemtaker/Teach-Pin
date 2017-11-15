@@ -1,13 +1,15 @@
+
+
 <div class="container">
   <div class="row">
     <% @lessons.each do  |lesson| %>
     <div class="col-xs-12 col-sm-4">
       <% if lesson.category == "school" %>
-        <% bg_path = image_path 'school.png' %>
+      <% bg_path = image_path 'school.png' %>
       <% elsif lesson.category == "coding" %>
-        <% bg_path = image_path 'coding.png' %>
+      <% bg_path = image_path 'coding.png' %>
       <% elsif lesson.category == "arts" %>
-        <% bg_path = image_path 'arts.png'  %>
+      <% bg_path = image_path 'arts.png'  %>
       <% end %>
       <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('<%= bg_path %>');">
         <%= link_to lesson_path(lesson) do %>
@@ -23,14 +25,44 @@
 
         </div>
 
-          <!-- <img class="card-user" src="https://kitt.lewagon.com/placeholder/users/tgenaitay">
-            <a class="card-link" href="#" ></a> -->
-          </div>
-        </div>
-        <% end %>
-        <% end %>
       </div>
     </div>
+    <% end %>
+    <% end %>
+  </div>
+</div>
+
+<%= render 'layouts/tab' %>
+
+<div class="container">
+  <div class="row">
+    <% @filtered_bookings.each do  |booking| %>
+    <div class="col-xs-12 col-sm-4">
+      <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('<%= bg_path %>');">
+        <div class="card-category"><%= booking.lesson.title %></div>
+        <div class="card-description">
+          <p><%= booking.booking_time %></p>
+          <p><%= booking.status %></p>
+        </div>
+        <div class="card-price">
+          <p><%="DKK #{booking.lesson.price}" %></p>
+        </div>
+        <div class="card-user">
+
+        </div>
+
+      </div>
+    </div>
+    <% end %>
+  </div>
+</div>
 
 
+
+
+
+
+
+          <!-- <img class="card-user" src="https://kitt.lewagon.com/placeholder/users/tgenaitay">
+            <a class="card-link" href="#" ></a> -->
 

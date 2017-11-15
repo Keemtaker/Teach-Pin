@@ -1,0 +1,15 @@
+<div class="tabs">
+<%= link_to dashboard_path(active: "accepted"), class: 'tab active' do  %>
+    <h3>Lessons</h3>
+    <p>Accepted</p>
+
+  <% end %>
+<%= link_to dashboard_path(active: "pending"), class: 'tab' do  %>
+    <h3>Lessons</h3>
+    <p>Pending</p>
+  <% end %>
+  <%= link_to dashboard_path(active: "declined"), class: 'tab' do %>
+    <h3>Lessons</h3>
+    <p>Declined</p>
+  <% end %>
+

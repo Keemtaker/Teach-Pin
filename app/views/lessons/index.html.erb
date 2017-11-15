@@ -5,11 +5,11 @@
     <% @lessons.each do  |lesson| %>
     <div class="col-xs-12 col-sm-4">
       <% if lesson.category == "school" %>
-        <% bg_path = image_path 'school.png' %>
+        <% bg_path = cl_image_path @product.photo.path, height: 300, width: 400, crop: :fill %>
       <% elsif lesson.category == "coding" %>
-        <% bg_path = image_path 'coding.png' %>
+        <% bg_path = cl_image_path @product.photo.path, height: 300, width: 400, crop: :fill %>
       <% elsif lesson.category == "arts" %>
-        <% bg_path = image_path 'arts.png'  %>
+        <% bg_path = image_path cl_image_path @product.photo.path, height: 300, width: 400, crop: :fill  %>
       <% end %>
       <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('<%= bg_path %>');">
         <%= link_to lesson_path(lesson) do %>

@@ -46,7 +46,7 @@ class LessonsController < ApplicationController
     @active_tab = params[:active_tab]
     @lessons = current_user.lessons
     @filtered_bookings = Booking.joins(:lesson).where(lessons: {user: current_user}, status: @active_tab)
-  
+
    @lessons = current_user.lessons
  end
 

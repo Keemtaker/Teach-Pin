@@ -8,6 +8,7 @@ new_booking = Booking.new(booking_time: Time.now + 10000, status:"accepted")
 
 new_booking.lesson = new_lesson
 new_booking.user = new_user
+new_lesson.user = User.last
 
 new_lesson.save
 new_user.save
@@ -26,6 +27,7 @@ new_booking = Booking.new(booking_time: Time.now + 9000, status:"pending")
 
 new_booking.lesson = new_lesson
 new_booking.user = new_user
+new_lesson.user = User.last
 
 new_lesson.save
 new_user.save
@@ -44,6 +46,7 @@ new_booking = Booking.new(booking_time: Time.now + 11000, status:"accepted")
 
 new_booking.lesson = new_lesson
 new_booking.user = new_user
+new_lesson.user = User.last
 
 new_lesson.save
 new_user.save
@@ -62,6 +65,7 @@ new_booking = Booking.new(booking_time: Time.now + 11000, status:"accepted")
 
 new_booking.lesson = new_lesson
 new_booking.user = new_user
+new_lesson.user = User.last
 
 new_lesson.save
 new_user.save
@@ -80,6 +84,7 @@ new_booking = Booking.new(booking_time: Time.now + 14000, status:"declined")
 
 new_booking.lesson = new_lesson
 new_booking.user = new_user
+new_lesson.user = User.last
 
 new_lesson.save
 new_user.save
@@ -98,6 +103,7 @@ new_booking = Booking.new(booking_time: Time.now + 14000, status:"accepted")
 
 new_booking.lesson = new_lesson
 new_booking.user = new_user
+new_lesson.user = User.last
 
 new_lesson.save
 new_user.save
@@ -116,6 +122,7 @@ new_booking = Booking.new(booking_time: Time.now + 13000, status:"accepted")
 
 new_booking.lesson = new_lesson
 new_booking.user = new_user
+new_lesson.user = User.last
 
 new_lesson.save
 new_user.save
@@ -134,6 +141,7 @@ new_booking = Booking.new(booking_time: Time.now + 13000, status:"accepted")
 
 new_booking.lesson = new_lesson
 new_booking.user = new_user
+new_lesson.user = User.last
 
 new_lesson.save
 new_user.save
@@ -152,6 +160,7 @@ new_booking = Booking.new(booking_time: Time.now + 13000, status:"accepted")
 
 new_booking.lesson = new_lesson
 new_booking.user = new_user
+new_lesson.user = User.last
 
 new_lesson.save
 new_user.save

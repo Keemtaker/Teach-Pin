@@ -26,7 +26,7 @@ class LessonsController < ApplicationController
   def show
     @booking = Booking.new
     @lesson = Lesson.find(params[:id])
-    @lesson_coordinates = { lat: @flat.latitude, lng: @flat.longitude }
+    @lesson_coordinates = { lat: @lesson.latitude, lng: @lesson.longitude }
   end
 
   def edit
@@ -46,7 +46,7 @@ class LessonsController < ApplicationController
     @active_tab = params[:active_tab]
     @lessons = current_user.lessons
     @filtered_bookings = Booking.joins(:lesson).where(lessons: {user: current_user}, status: @active_tab)
-  
+
    @lessons = current_user.lessons
  end
 

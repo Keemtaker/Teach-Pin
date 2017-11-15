@@ -26,7 +26,7 @@ class LessonsController < ApplicationController
   def show
     @booking = Booking.new
     @lesson = Lesson.find(params[:id])
-    @lesson_coordinates = { lat: @flat.latitude, lng: @flat.longitude }
+    @lesson_coordinates = { lat: @lesson.latitude, lng: @lesson.longitude }
   end
 
   def edit

@@ -42,8 +42,14 @@ class LessonsController < ApplicationController
 
   #creating dashboard logic
   def dashboard
+    #accedpted lessons
+    @active_tab = params[:active_tab]
+    @lessons = current_user.lessons
+    @filtered_bookings = Booking.joins(:lesson).where(lessons: {user: current_user}, status: @active_tab)
+  
    @lessons = current_user.lessons
  end
+
 
  private
 
@@ -52,6 +58,10 @@ class LessonsController < ApplicationController
 end
 
 
+
+  def lesson_params
+    params.require(:lesson).permit(:description, :location, :category, :price, :title, :user_id)
+  end
 def lesson_params
   params.require(:lesson).permit(:description, :location, :category, :price, :title, :user_id)
 end

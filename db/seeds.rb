@@ -11,6 +11,9 @@ Booking.destroy_all
 Lesson.destroy_all
 User.destroy_all
 
+=======
+# USER 1
+
 new_user = User.new(email:"nick@gmail.com", password:"123456", first_name:"Nick", last_name:"Vang")
 
 new_lesson = Lesson.new(description:"Join Harry's Guitar Lesson. Been playing for over 20 years and love to share my passion with others", location:"Gulbergsgade 7, 2200 Kbh", category:"school", price:80, title:"Guitar Lesson in Norrebro")
@@ -179,5 +182,3 @@ new_user.save
 new_booking.lesson = Lesson.last
 new_booking.user = User.last
 new_booking.save
-
-

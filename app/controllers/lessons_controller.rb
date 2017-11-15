@@ -34,7 +34,10 @@ class LessonsController < ApplicationController
 
   #creating dashboard logic
   def dashboard
-   @lessons = current_user.lessons
+    #accedpted lessons
+    @active_tab = params[:active_tab]
+    @lessons = current_user.lessons
+    @filtered_bookings = Booking.joins(:lesson).where(lessons: {user: current_user}, status: @active_tab)
   end
 
   private
@@ -42,6 +45,7 @@ class LessonsController < ApplicationController
   def set_lesson
     @lesson = Lesson.find(params[:id])
   end
+
 
 
   def lesson_params

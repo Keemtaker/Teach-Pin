@@ -1,54 +1,55 @@
 
-<div class="container">
-  <div class="row">
-    <% @lessons.each do  |lesson| %>
-    <div class="col-xs-12 col-sm-4">
-      <% if lesson.category == "school" %>
-      <% bg_path = image_path 'school.png'  %>
-      <% elsif lesson.category == "coding" %>
-      <% bg_path = image_path 'coding.png'  %>
-      <% elsif lesson.category == "arts" %>
-      <% bg_path = image_path 'arts.png'  %>
-      <% end %>
-      <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('<%= bg_path %>');">
-        <div class="card-category"><%= lesson.title %></div>
-        <div class="card-description">
-          <p><%= lesson.location %></p>
-          <p><%= lesson.category %></p>
+<div class="index-container">
+  <div class="card-container">
+    <div class="row">
+  <% @lessons.each do  |lesson| %>
+      <div class="col-xs-12 col-sm-6 col-md-4">
+        <% if lesson.category == "school" %>
+        <% bg_path = image_path 'school.png'  %>
+        <% elsif lesson.category == "coding" %>
+        <% bg_path = image_path 'coding.png'  %>
+        <% elsif lesson.category == "arts" %>
+        <% bg_path = image_path 'arts.png'  %>
+        <% end %>
+        <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('<%= bg_path %>');">
+          <%= link_to lesson_path(lesson) do %>
+          <div class="card-category"><%= lesson.title %></div>
+          <div class="card-description">
+            <p><%= lesson.location %></p>
+            <p><%= lesson.category %></p>
+          </div>
+          <div class="card-price">
+            <p><%="DKK #{lesson.price}" %></p>
+          </div>
+          <div class="card-user">
+            <img class="card-user" src="https://kitt.lewagon.com/placeholder/users/tgenaitay">
+          </div>
+          <a class="card-link" href="/lessons/show" ></a>
+          <% end %>
         </div>
-        <div class="card-price">
-          <p><%="DKK #{lesson.price}" %></p>
-        </div>
-        <img class="card-user" src="https://kitt.lewagon.com/placeholder/users/tgenaitay">
-        <a class="card-link" href="" ></a>
-        <%= link_to "", lesson_path(lesson), class: "card-link"  %>
-        <a class="card-link" href="/lessons_path" ></a>
       </div>
-    </div>
     <% end %>
-    <div>
-      <div id="map" style="width: 100%; height: 100vh;"></div>
+    </div>
+    </div>
 
-  <% content_for(:after_js) do %>
-    <script>
-      var handler = Gmaps.build('Google');
-      handler.buildMap({ internal: { id: 'map' } }, function() {
-      markers = handler.addMarkers(<%= raw @hash.to_json %>);
-      handler.bounds.extendWith(markers);
-      handler.fitMapToBounds();
-      if (markers.length == 0) {
+    <div id="map" style= "height: 100vh; width: 400px;"></div>
+</div>
+
+<% content_for(:after_js) do %>
+<script type="text/javascript">
+  var handler = Gmaps.build('Google');
+  handler.buildMap({ internal: { id: 'map' } }, function() {
+    markers = handler.addMarkers(<%= raw @hash.to_json %>);
+    handler.bounds.extendWith(markers);
+    handler.fitMapToBounds();
+    if (markers.length == 0) {
       handler.getMap().setZoom(2);
-      } else if (markers.length == 1) {
-        handler.getMap().setZoom(14);
-        }
-      });
-    </script>
+    } else if (markers.length == 1) {
+      handler.getMap().setZoom(14);
+    }
+  });
+</script>
 <% end %>
-</div>
-</div>
-
-</div>
-
 
 
 

@@ -16,6 +16,14 @@
   }
 }
 
+.form-wrapper p {
+  color: black !important;
+  margin-bottom: 0px !important;
+}
+#lesson-category {
+  margin-bottom: 10px;
+}
+
 .line-separator{
 height:1px;
 background:#717171;
@@ -68,7 +76,7 @@ border-bottom:1px solid #313030;
 }
 
 .booking-btn {
-  width: 100%;
+  // width: 100%;
 }
 
 .form-container{

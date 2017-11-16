@@ -2,11 +2,14 @@ class LessonsController < ApplicationController
   before_action :set_lesson, only: [:show, :edit, :update, :destroy]
   def index
     @lessons = Lesson.where.not(latitude: nil, longitude: nil)
+    if params[:category]
+      @category = params[:category]
+      @lessons = @lessons.where(category: @category)
+    end
 
     @hash = Gmaps4rails.build_markers(@lessons) do |lesson, marker|
       marker.lat lesson.latitude
       marker.lng lesson.longitude
-      # marker.infowindow render_to_string(partial: "/flats/map_box", locals: { flat: flat })
     end
   end
 
@@ -47,23 +50,20 @@ class LessonsController < ApplicationController
     @lessons = current_user.lessons
     @filtered_bookings = Booking.joins(:lesson).where(lessons: {user: current_user}, status: @active_tab)
 
-   @lessons = current_user.lessons
- end
+    @lessons = current_user.lessons
+  end
 
+  private
 
- private
-
- def set_lesson
-  @lesson = Lesson.find(params[:id])
-end
-
-
+  def set_lesson
+    @lesson = Lesson.find(params[:id])
+  end
 
   def lesson_params
     params.require(:lesson).permit(:description, :location, :category, :price, :title, :user_id)
   end
-def lesson_params
-  params.require(:lesson).permit(:description, :location, :category, :price, :title, :user_id)
-end
 
+  def lesson_params
+    params.require(:lesson).permit(:description, :location, :category, :price, :title, :user_id)
+  end
 end

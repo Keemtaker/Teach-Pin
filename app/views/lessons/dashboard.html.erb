@@ -1,10 +1,8 @@
 <div class="dashboard-wrapper">
 <div class="booking_columns">
   <div class="column-header">
-    <h3>Accepted</h3>
-    <h3>Bookings</h3>
   </div>
-  <div class="column">
+  <div class="accepted-column">
     <% @accepted_bookings.each do  |booking| %>
       <% if booking.lesson.category == "school" %>
         <% bg_path = image_path 'school.png' %>
@@ -18,10 +16,8 @@
   </div>
 
   <div class="column-header">
-    <h3>Pending</h3>
-    <h3>Bookings</h3>
   </div>
-  <div class="column">
+  <div class="pending-column">
     <% @pending_bookings.each do  |booking| %>
       <% if booking.lesson.category == "school" %>
         <% bg_path = image_path 'school.png' %>
@@ -35,10 +31,8 @@
   </div>
 
   <div class="column-header">
-    <h3>Declined</h3>
-    <h3>Bookings</h3>
   </div>
-  <div class="column">
+  <div class="declined-column">
     <% @declined_bookings.each do  |booking| %>
       <% if booking.lesson.category == "school" %>
         <% bg_path = image_path 'school.png' %>

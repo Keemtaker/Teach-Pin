@@ -3,7 +3,8 @@
         <div class="card-category"><%= booking.lesson.title %></div>
         <div class="card-description">
           <p><%= booking.lesson.location %></p>
-          <p><%= booking.lesson.category %></p>
+          <p><%= booking.lesson.category.capitalize %></p>
+          <p id="card-status"><%= booking.status.capitalize %></p>
         </div>
         <div class="card-price">
           <p><%="DKK #{booking.lesson.price}" %></p>

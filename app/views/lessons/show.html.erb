@@ -22,13 +22,13 @@
               <%= @lesson.description %>
             </div>
             <div class='lesson-booking-card-price'>
-              <p><%= "DKK #{@lesson.price}" %></p>
+              <p><%= "DKK #{@lesson.price} per hour" %></p>
             </div>
           </div>
         </div>
         <div class="col-xs-12 col-md-4">
           <div class="booking-form">
-            <div class="form-wrapper">
+            <div class="form-wrapper input-text">
               <%= simple_form_for([@lesson, @booking])  do |f| %>
               <div class="form-title">
                 <%= f.input :booking_time, label: "Select A Lesson Time" %>

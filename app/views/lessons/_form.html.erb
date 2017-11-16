@@ -1,9 +1,10 @@
 
 <div class="form-wrapper">
   <%= simple_form_for (@lesson)  do |f| %>
+  <p>Select a Category</p>
+    <%= f.select :category, category: %w(arts coding school)%>
     <%= f.input :location, :label => "Select a Location" %>
-    <%= f.input :category, :label => "Select a Category" %>
-    <%= f.input :description, :label => "Describe the lesson" %>
+    <%= f.input :description, as: :text, :label => "Describe the lesson" %>
     <%= f.input :price, :label => "Price" %>
     <%= f.submit 'Create', class: "btn btn-success" %>
   <% end %>

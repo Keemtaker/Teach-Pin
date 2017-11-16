@@ -4,13 +4,14 @@
   color: white;
   border-color: #003F7F;
   background-color: #003F7F;
-  opacity: 0.9;
-  text-color: white;
+  // opacity: 0.9;
+  // text-color: white;
   border-radius: 10px;
   font-weight: 100px;
   font-family: 'Varela Round', sans-serif; font-size: 15px;
   text-decoration: none;
 }
+
 .btn-teachpin:hover {
   text-decoration: none;
   background-color: #003F7F;
@@ -26,6 +27,7 @@
   font-family: 'Varela Round', sans-serif; font-size: 15px;
   text-decoration: none;
 }
+
 // Book Now Button
 .btn-book {
   font-family: 'Varela Round', sans-serif;
@@ -39,29 +41,36 @@
   margin-top: 70px;
   margin-left: 220px;
 }
+
 // Category Button
 .btn-category {
   font-family: 'Varela Round', sans-serif;  font-size: 15px;
-  line-height: 18px;
-  letter-spacing: 0.2px;
-  padding-top: 6px;
-  padding-bottom: 6px;
+  // line-height: 18px;
+  // letter-spacing: 0.2px;
+  // padding-top: 6px;
+  // padding-bottom: 6px;
   color: #484848;
   background: #D0D0D0;
   border: 1px solid #dce0e0;
   border-radius: 4px;
-  cursor: pointer;
-  display: inline-block;
-  outline: none;
-  padding-left: 12px;
-  padding-right: 12px;
-  position: relative;
-  text-align: center;
+  font-size: 24px;
+  margin: 10px;
+  padding: 10px;
+  opacity: 0.8;
+  // cursor: pointer;
+  // display: inline-block;
+  // outline: none;
+  // padding-left: 12px;
+  // padding-right: 12px;
+  // position: relative;
+  // text-align: center;
   text-decoration: none;
-  width: auto;
+  // width: auto;
 }
+
 .btn-category:hover {
   background: #D0D0D0;
+  opacity: 1;
   box-shadow: 1px;
   color: #484848;
 }

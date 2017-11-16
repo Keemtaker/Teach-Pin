@@ -12,7 +12,7 @@
 
 /* Logo */
 .navbar-wagon-brand img {
-  height: 50px;
+  height: 60px;
 }
 
 /* User Avatar */
@@ -29,8 +29,20 @@
   justify-content: space-between;
 }
 
+.navbar-btn {
+  text-decoration: none;
+  color: #A7ABB0;
+}
+
+.navbar-btn:hover {
+  text-decoration: none;
+  color: #A7ABB0;
+  font-weight: lighter;
+}
+
 /* Basic navbar item */
 .navbar-wagon-item {
+  text: 10px;
   cursor: pointer;
   padding: 0 20px;
 }

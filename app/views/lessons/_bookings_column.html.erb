@@ -1,0 +1,12 @@
+    <div class="cell">
+      <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('<%= bg_path %>');">
+        <div class="card-category"><%= booking.lesson.title %></div>
+        <div class="card-description">
+          <p><%= booking.lesson.location %></p>
+          <p><%= booking.lesson.category %></p>
+        </div>
+        <div class="card-price">
+          <p><%="DKK #{booking.lesson.price}" %></p>
+        </div>
+      </div>
+    </div>

@@ -2,19 +2,14 @@ class LessonsController < ApplicationController
   before_action :set_lesson, only: [:show, :edit, :update, :destroy]
   def index
     @lessons = Lesson.where.not(latitude: nil, longitude: nil)
+    if params[:category]
+      @category = params[:category]
+      @lessons = @lessons.where(category: @category)
+    end
 
     @hash = Gmaps4rails.build_markers(@lessons) do |lesson, marker|
       marker.lat lesson.latitude
       marker.lng lesson.longitude
-    end
-    music = nil
-    coding = nil
-    arts = nil
-    if lesson.category == 'music'
-      category.music
-
-    else
-
     end
   end
 
@@ -67,6 +62,7 @@ class LessonsController < ApplicationController
   def lesson_params
     params.require(:lesson).permit(:description, :location, :category, :price, :title, :user_id)
   end
+
   def lesson_params
     params.require(:lesson).permit(:description, :location, :category, :price, :title, :user_id)
   end

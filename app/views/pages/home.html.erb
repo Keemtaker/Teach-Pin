@@ -6,11 +6,10 @@
       <h1>Welcome to TeachPin</h1>
       <p>Easy and Simple teaching from professionals</p>
 
-
-      <ul>
-        <a class='btn btn-primary btn-category' href='/lessons' >School</a>
-        <a class='btn btn-primary btn-category' href='/lessons' >Coding</a>
-        <a class='btn btn-primary btn-category' href='/lessons' >Arts</a>
+      <ul class="list-inline">
+        <li><%= link_to "School", lessons_path(category: "school"), class: 'btn btn-primary btn-category' %></li>
+        <li><%= link_to "Coding", lessons_path(category: "coding"), class: 'btn btn-primary btn-category' %></li>
+        <li><%= link_to "Arts", lessons_path(category: "arts"), class: 'btn btn-primary btn-category' %></li>
       </ul>
 
     </div>

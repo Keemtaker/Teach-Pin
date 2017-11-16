@@ -47,23 +47,19 @@ class LessonsController < ApplicationController
     @lessons = current_user.lessons
     @filtered_bookings = Booking.joins(:lesson).where(lessons: {user: current_user}, status: @active_tab)
 
-   @lessons = current_user.lessons
- end
+    @lessons = current_user.lessons
+  end
 
+  private
 
- private
-
- def set_lesson
-  @lesson = Lesson.find(params[:id])
-end
-
-
+  def set_lesson
+    @lesson = Lesson.find(params[:id])
+  end
 
   def lesson_params
     params.require(:lesson).permit(:description, :location, :category, :price, :title, :user_id)
   end
-def lesson_params
-  params.require(:lesson).permit(:description, :location, :category, :price, :title, :user_id)
-end
-
+  def lesson_params
+    params.require(:lesson).permit(:description, :location, :category, :price, :title, :user_id)
+  end
 end

@@ -13,7 +13,7 @@
       <a href="/create" class="navbar-wagon-item btn btn-primary btn-teachpin">Create Lesson</a>
       <% if !current_user %>
       <%= link_to "Login", new_user_session_path, class: "navbar-wagon-item navbar-btn" %>
-      <a href="" class="navbar-wagon-item navbar-btn">Sign up</a>
+      <a href="/users/sign_up" class="navbar-wagon-item navbar-btn">Sign up</a>
       <% end %>
 
 

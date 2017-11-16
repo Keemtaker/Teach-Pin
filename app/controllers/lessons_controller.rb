@@ -6,7 +6,15 @@ class LessonsController < ApplicationController
     @hash = Gmaps4rails.build_markers(@lessons) do |lesson, marker|
       marker.lat lesson.latitude
       marker.lng lesson.longitude
-      # marker.infowindow render_to_string(partial: "/flats/map_box", locals: { flat: flat })
+    end
+    music = nil
+    coding = nil
+    arts = nil
+    if lesson.category == 'music'
+      category.music
+
+    else
+
     end
   end
 

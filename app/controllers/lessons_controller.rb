@@ -19,8 +19,9 @@ class LessonsController < ApplicationController
 
   def create
     @lesson = Lesson.new(lesson_params)
+    @lesson.user = current_user
     if @lesson.save
-      redirect to lessons_path
+      redirect_to lessons_path
     else
       render :new
     end
@@ -57,10 +58,6 @@ class LessonsController < ApplicationController
 
   def set_lesson
     @lesson = Lesson.find(params[:id])
-  end
-
-  def lesson_params
-    params.require(:lesson).permit(:description, :location, :category, :price, :title, :user_id)
   end
 
   def lesson_params

@@ -3,6 +3,7 @@
   <%= simple_form_for (@lesson)  do |f| %>
   <p>Select a Category</p>
     <%= f.select :category, category: %w(arts coding school)%>
+    <%= f.input :title, label: "Title of your lesson" %>
     <%= f.input :location, :label => "Select a Location" %>
     <%= f.input :description, as: :text, :label => "Describe the lesson" %>
     <%= f.input :price, :label => "Price" %>

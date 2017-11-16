@@ -13,35 +13,33 @@
         <i class="fa fa-graduation-cap" aria-hidden="true"> Professional Teachers</i>  <i class="fa fa-book" aria-hidden="true"> Advanced Lessons </i>  <i class="fa fa-calendar-check-o" aria-hidden="true"> Your Schedule</i>  <i class="fa fa-map-marker" aria-hidden="true"> Conviently Located</i>
       </div>
 
-    <div class="lesson-description">
-      <div class="lesson-booking-card-category">
-        <h3><%= @lesson.title %></h2>
-        </div>
-        <div class="lesson-booking-card-description">
-          <!-- <div class="info-form"> -->
-            <%= @lesson.description %>
+      <div class="lesson-description">
+        <div class="lesson-booking-card-category">
+          <h3><%= @lesson.title %></h2>
           </div>
-          <div class='lesson-booking-card-price'>
-            <p><%= "DKK #{@lesson.price}" %></p>
-          </div>
-        </div>
-    </div>
-        <div class="col-xs-12 col-md-4">
-          <!-- <div class= "form"> -->
-            <div class="booking-form">
-              <div class="form-wrapper">
-                <%= simple_form_for([@lesson, @booking])  do |f| %>
-                <div class="form-title">
-                  <%= f.input :booking_time, label: "Select A Lesson Time" %>
-                </div>
-                <div class="form-button">
-                  <%= f.submit 'Book Now', class: "btn btn-danger booking-btn" %>
-                </div>
-                <% end %>
-              </div>
+          <div class="lesson-booking-card-description">
+            <!-- <div class="info-form"> -->
+              <%= @lesson.description %>
+            </div>
+            <div class='lesson-booking-card-price'>
+              <p><%= "DKK #{@lesson.price} per hour" %></p>
             </div>
           </div>
         </div>
-      </div>
+        <div class="col-xs-12 col-md-4">
+          <div class="booking-form">
+            <div class="form-wrapper input-text">
+              <%= simple_form_for([@lesson, @booking])  do |f| %>
+              <div class="form-title">
+                <%= f.input :booking_time, label: "Select A Lesson Time" %>
+              </div>
+              <div class="form-button">
+                <%= f.submit 'Book Now', class: "btn btn-danger booking-btn" %>
+              </div>
+              <% end %>
+            </div>
+          </div>
+        </div>
+
 
 

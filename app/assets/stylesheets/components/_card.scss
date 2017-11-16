@@ -10,8 +10,8 @@
 }
 .card-user {
   position: absolute;
-  right: 10px;
-  top: 10px;
+  right: 0px;
+  top: 0px;
   width: 30px;
   border-radius: 50%;
 }
@@ -27,7 +27,7 @@
 .card-description {
   color: white;
   position: absolute;
-  bottom: 70px;
+  bottom: 50px;
   left: 10px;
 }
 .card-description h2 {
@@ -36,9 +36,7 @@
 .card-description p {
   font-size: 14px;
   opacity: 0.8;
-  font-weight: lighter;
 }
-
 .card-price {
   color: white;
   position: absolute;
@@ -46,7 +44,6 @@
   left: 210px;
   font-size: 14px;
 }
-
 .card-link {
   position: absolute;
   top: 0;
@@ -61,11 +58,6 @@
   opacity: 0.1;
 }
 
-.card-price{
-  position: absolute;
-  bottom: 10px;
-  right: 10px;
-}
 // AVATAR
 .avatar {
   border-radius: 50px;

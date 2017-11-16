@@ -14,6 +14,21 @@
   input {
     color: #363636;
   }
+  textarea {
+   color: #363636
+  }
+}
+
+#new-lesson {
+  padding: 10px;
+}
+
+.form-wrapper p {
+  color: black !important;
+  margin-bottom: 0px !important;
+}
+#lesson-category {
+  margin-bottom: 10px;
 }
 
 .line-separator{
@@ -68,7 +83,7 @@ border-bottom:1px solid #313030;
 }
 
 .booking-btn {
-  width: 100%;
+  // width: 100%;
 }
 
 .form-container{
@@ -112,7 +127,7 @@ border-bottom:1px solid #313030;
 }
 
 .booking-banner {
-  // color: white;
+  color: white;
   text-align: center;
   height: 50vh !important;
   /* if you have a 70px navbar => height: calc(100vh - 70px); */

@@ -1,6 +1,6 @@
 .form-wrapper {
   background-color: #ecf0f1;
-  padding: 70px 60px 100px 80px;
+  padding: 70px 65px 90px 70px;
   border-radius: 5px;
   box-shadow: 4px 4px 4px 4px #7f8c8d;
   margin: 64px 5px 48px 8px;
@@ -8,6 +8,9 @@
     color: #363636;
   }
   select {
+    color: #363636;
+  }
+  input {
     color: #363636;
   }
 }
@@ -60,6 +63,7 @@ border-bottom:1px solid #313030;
 
 .form-button {
   padding-top: 10px;
+  width: 40px;
 }
 
 .booking-btn {

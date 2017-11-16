@@ -1,33 +1,12 @@
-  <div class="main-container">
-    <div class="container">
-      <div class="row">
-        <!-- <div class="col-md-4"> -->
-          <div class= "form_info">
-            <h2><%= @lesson.title %></h2>
-            <h2><%= @lesson.description %></h2>
-          </div>
-        </div>
-      </div>
-      <div class="container">
-        <div class="row">
-          <!-- <div class="col-md-4"> -->
-            <div class="row">
-              <div class= "form">
-                <div class="booking-form">
-                  <h2>Create a <%= @lesson.category %> lesson</h2>
-                  <div class="form-wrapper">
-                    <%= simple_form_for (@lesson)  do |f| %>
-                    <%= f.input :location, :label => "Select a Location" %>
-                    <%= f.input :category, :label => "Select a Category" %>
-                    <%= f.input :description, :label => "Describe the lesson" %>
-                    <%= f.input :price, :label => "Price", class: "input-text" %>
-                    <%= f.submit 'Create', class: "btn btn-success" %>
-                    <% end %>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
+
+<div class="form-wrapper">
+  <%= simple_form_for (@lesson)  do |f| %>
+    <%= f.input :location, :label => "Select a Location" %>
+    <%= f.input :category, :label => "Select a Category" %>
+    <%= f.input :description, :label => "Describe the lesson" %>
+    <%= f.input :price, :label => "Price" %>
+    <%= f.submit 'Create', class: "btn btn-success" %>
+  <% end %>
+</div>
+
 

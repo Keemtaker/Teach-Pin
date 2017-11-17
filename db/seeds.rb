@@ -56,40 +56,40 @@ end
 
 # # ----------------------------------ACCEPTED-------------------------------
 # # USER
-# new_user1 = User.new(email:"louise@gmail.com", password:"123456", first_name:"louise", last_name:"mikkelsen")
+new_user1 = User.new(email:"nick@gmail.com", password:"123456", first_name:"Nick", last_name:"Vang")
 
-# new_lesson1 = Lesson.new(description:"Amazing Piano Lesson. I have been playing piano for over 10 years and love teaching others.", location:"Amaliegade 25, 1256 Kbh", category:"school", price:470, title:"Louise's Piano Classes")
+new_lesson1 = Lesson.new(description:"Amazing Piano Lesson. I have been playing piano for over 10 years and love teaching others.", location:"Amaliegade 25, 1256 Kbh", category:"school", price:470, title:"Louise's Piano Classes")
 
-# new_booking1 = Booking.new(booking_time: Time.now + 13000, status:"accepted")
+new_booking1 = Booking.new(booking_time: Time.now + 13000, status:"accepted")
 
-# new_booking1.lesson = new_lesson
-# new_booking1.user = new_user
-# new_lesson1.user = User.last
+new_booking1.lesson = new_lesson
+new_booking1.user = new_user
+new_lesson1.user = User.last
 
-# new_lesson1.save
-# new_user1.save
+new_lesson1.save
+new_user1.save
 
-# new_booking1.lesson = Lesson.last
-# new_booking1.user = User.last
-# new_booking1.save
+new_booking1.lesson = Lesson.last
+new_booking1.user = User.last
+new_booking1.save
 
 # # USER
-# new_user = User.new(email:"louise@gmail.com", password:"123456", first_name:"louise", last_name:"mikkelsen")
+new_user = User.new(email:"nick@gmail.com", password:"123456", first_name:"Nick", last_name:"Vang")
 
-# new_lesson = Lesson.new(description:"Join Karl's heavy metal music lesson. Been singing for over 10 years and love making awesome shit", location:"Esplanden 7, 1263 Kbh", category:"school", price:160, title:"Karl's Heavy Metal Music Class")
+new_lesson = Lesson.new(description:"Join Karl's heavy metal music lesson. Been singing for over 10 years and love making awesome shit", location:"Esplanden 7, 1263 Kbh", category:"school", price:160, title:"Karl's Heavy Metal Music Class")
 
-# new_booking = Booking.new(booking_time: Time.now + 13000, status:"accepted")
+new_booking = Booking.new(booking_time: Time.now + 13000, status:"declined")
 
-# new_booking.lesson = new_lesson
-# new_booking.user = new_user
-# new_lesson.user = User.last
+new_booking.lesson = new_lesson
+new_booking.user = new_user
+new_lesson.user = User.last
 
-# new_lesson.save
-# new_user.save
+new_lesson.save
+new_user.save
 
-# new_booking.lesson = Lesson.last
-# new_booking.user = User.last
-# new_booking.save
+new_booking.lesson = Lesson.last
+new_booking.user = User.last
+new_booking.save
 
 # # --------------------------------ACCEPTED & PENDING---------------------------
 

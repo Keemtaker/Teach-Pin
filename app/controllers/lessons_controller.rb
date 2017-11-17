@@ -31,6 +31,7 @@ class LessonsController < ApplicationController
     @booking = Booking.new
     @lesson = Lesson.find(params[:id])
     @lesson_coordinates = { lat: @lesson.latitude, lng: @lesson.longitude }
+    @alert_message = "Your booking was successful. Go to my dashboard to view all your bookings."
   end
 
   def edit

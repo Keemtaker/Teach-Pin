@@ -4,6 +4,53 @@ Booking.destroy_all
 Lesson.destroy_all
 User.destroy_all
 
+# REFACTORED----------------------------------------------------------
+
+bookings = [
+Booking.new(booking_time: DateTime.new(2017,11,27,8,45), status:"accepted"),
+Booking.new(booking_time: Time.now + 9000, status:"accepted"),
+Booking.new(booking_time: Time.now + 10000, status:"declined"),
+Booking.new(booking_time: Time.now + 10000, status:"accepted"),
+Booking.new(booking_time: Time.now + 11000, status:"declined"),
+Booking.new(booking_time: Time.now + 19000, status:"pending"),
+Booking.new(booking_time: Time.now + 13000, status:"pending"),
+Booking.new(booking_time: Time.now + 16000, status:"accepted"),
+Booking.new(booking_time: Time.now + 12000, status:"pending")
+]
+
+users = [
+User.create(email:"louise@gmail.com", password:"123456", first_name:"Louise", last_name:"Mikkelsen"),
+User.create(email:"ralph@gmail.com", password:"123456", first_name:"Ralph", last_name:"Fred"),
+User.create(email:"BonJovi@gmail.com", password:"123456", first_name:"Jon", last_name:"BonJovi"),
+User.create(email:"LunaL@gmail.com", password:"123456", first_name:"Luna", last_name:"Lovegood"),
+User.create(email:"GraceMB@gmail.com", password:"123456", first_name:"Grace", last_name:"McBride"),
+User.create(email:"magozzi@gmail.com", password:"123456", first_name:"Blank", last_name:"Maggozzi"),
+User.create(email:"babs@gmail.com", password:"123456", first_name:"Barbara", last_name:"Streisand"),
+User.create(email:"nick@gmail.com", password:"123456", first_name:"Nick", last_name:"Vang"),
+User.create(email:"ashlee@gmail.com", password:"123456", first_name:"Ashlee", last_name:"Ste")
+]
+
+lessons = [
+Lesson.new(description:"Join Mike's Piano lesson. Been playing piano for over 10 years and shit", location:"Amaliegade 25, 1256 Kbh", category:"arts", price:470, title:"Mike's Piano Classes"),
+Lesson.new(description:"Join Bob's Piano lesson. Been playing piano for over 10 years and love making awesome shit", location:"Amaliegade 25, 1256 Kbh", category:"coding", price:470, title:"Mike's Piano Classes"),
+Lesson.new(description:"Join Mike's Piano lesson. Been playing piano for over 10 years and love making awesome shit", location:"Amaliegade 25, 1256 Kbh", category:"school", price:470, title:"Mike's Piano Classes"),
+Lesson.new(description:"Join Mike's Piano lesson. Been playing piano for over 10 years and love making awesome ", location:"Amaliegade 25, 1256 Kbh", category:"arts", price:470, title:"Mike's Piano Classes"),
+Lesson.new(description:"Join Mike's Guitar lesson. Been playing piano for over 10 years and love making awesome shit", location:"Amaliegade 25, 1256 Kbh", category:"school", price:470, title:"Mike's Piano Classes"),
+Lesson.new(description:"Join Us Piano lesson. Been playing piano for over 10 years and love making awesome shit", location:"Amaliegade 25, 1256 Kbh", category:"coding", price:470, title:"Mike's Piano Classes")
+]
+
+lessons.each do |lesson|
+  lesson.user = users.sample
+  lesson.save!
+end
+
+bookings.each do |booking|
+  booking.user = users.sample
+  booking.lesson = lessons.sample
+  booking.save!
+end
+
+
 # # ----------------------------------ACCEPTED-------------------------------
 # # USER
 # new_user1 = User.new(email:"louise@gmail.com", password:"123456", first_name:"louise", last_name:"mikkelsen")
@@ -202,50 +249,5 @@ User.destroy_all
 # new_booking.user = User.last
 # new_booking.save
 
-# REFACTORED----------------------------------------------------------
-
-bookings = [
-Booking.new(booking_time: DateTime.new(2017,11,27,8,45), status:"accepted"),
-Booking.new(booking_time: Time.now + 9000, status:"accepted"),
-Booking.new(booking_time: Time.now + 10000, status:"declined"),
-Booking.new(booking_time: Time.now + 10000, status:"accepted"),
-Booking.new(booking_time: Time.now + 11000, status:"declined"),
-Booking.new(booking_time: Time.now + 19000, status:"pending"),
-Booking.new(booking_time: Time.now + 13000, status:"pending"),
-Booking.new(booking_time: Time.now + 16000, status:"accepted"),
-Booking.new(booking_time: Time.now + 12000, status:"pending")
-]
-
-users = [
-User.create(email:"louise@gmail.com", password:"123456", first_name:"Louise", last_name:"Mikkelsen"),
-User.create(email:"ralph@gmail.com", password:"123456", first_name:"Ralph", last_name:"Fred"),
-User.create(email:"BonJovi@gmail.com", password:"123456", first_name:"Jon", last_name:"BonJovi"),
-User.create(email:"LunaL@gmail.com", password:"123456", first_name:"Luna", last_name:"Lovegood"),
-User.create(email:"GraceMB@gmail.com", password:"123456", first_name:"Grace", last_name:"McBride"),
-User.create(email:"magozzi@gmail.com", password:"123456", first_name:"Blank", last_name:"Maggozzi"),
-User.create(email:"babs@gmail.com", password:"123456", first_name:"Barbara", last_name:"Streisand"),
-User.create(email:"nick@gmail.com", password:"123456", first_name:"Nick", last_name:"Vang"),
-User.create(email:"ashlee@gmail.com", password:"123456", first_name:"Ashlee", last_name:"Ste")
-]
-
-lessons = [
-Lesson.new(description:"Join Mike's Piano lesson. Been playing piano for over 10 years and shit", location:"Amaliegade 25, 1256 Kbh", category:"school", price:470, title:"Mike's Piano Classes"),
-Lesson.new(description:"Join Bob's Piano lesson. Been playing piano for over 10 years and love making awesome shit", location:"Amaliegade 25, 1256 Kbh", category:"school", price:470, title:"Mike's Piano Classes"),
-Lesson.new(description:"Join Mike's Piano lesson. Been playing piano for over 10 years and love making awesome shit", location:"Amaliegade 25, 1256 Kbh", category:"school", price:470, title:"Mike's Piano Classes"),
-Lesson.new(description:"Join Mike's Piano lesson. Been playing piano for over 10 years and love making awesome ", location:"Amaliegade 25, 1256 Kbh", category:"school", price:470, title:"Mike's Piano Classes"),
-Lesson.new(description:"Join Mike's Guitar lesson. Been playing piano for over 10 years and love making awesome shit", location:"Amaliegade 25, 1256 Kbh", category:"school", price:470, title:"Mike's Piano Classes"),
-Lesson.new(description:"Join Us Piano lesson. Been playing piano for over 10 years and love making awesome shit", location:"Amaliegade 25, 1256 Kbh", category:"school", price:470, title:"Mike's Piano Classes")
-]
-
-lessons.each do |lesson|
-  lesson.user = users.sample
-  lesson.save!
-end
-
-bookings.each do |booking|
-  booking.user = users.sample
-  booking.lesson = lessons.sample
-  booking.save!
-end
 
 

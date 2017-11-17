@@ -6,6 +6,8 @@ class Booking < ApplicationRecord
 # needs: status exists - inclusion (pending/confirmed/rejected)
       #  booking_time - exists, only integer true
   validate :date_is_in_the_future
+  validates :lesson, presence: true
+  validates :user, presence: true
   validates :status, presence: true, inclusion: {in: %w(pending accepted declined)}
   validates :booking_time, presence: true
 

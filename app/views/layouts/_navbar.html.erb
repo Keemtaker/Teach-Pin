@@ -2,6 +2,7 @@
 <!-- NAVBAR -->
 
 <div class="navbar-wagon">
+
   <!-- Logo -->
   <a href="/" class="navbar-wagon-brand">
     <%= image_tag "logo.png", {id: "logo"}%>
@@ -16,7 +17,6 @@
     <%= link_to "Login", new_user_session_path, class: "navbar-wagon-item navbar-btn" %>
     <a href="/users/sign_up" class="navbar-wagon-item navbar-btn">Sign up</a>
     <% end %>
-
 
     <!-- Profile picture with dropdown list -->
     <% if current_user %>

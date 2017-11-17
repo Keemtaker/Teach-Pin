@@ -13,7 +13,7 @@
         <% end %>
         <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('<%= bg_path %>');">
           <%= link_to lesson_path(lesson) do %>
-          <div class="card-category"><%= lesson.title %></div>
+          <div class="card-category col-xs-4 col-md-12"><%= lesson.title %></div>
           <div class="card-description">
             <p><%= lesson.location %></p>
             <p><%= lesson.category %></p>

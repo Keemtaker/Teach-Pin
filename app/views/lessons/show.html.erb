@@ -17,7 +17,7 @@
       <div class="lesson-description">
         <div class="lesson-booking-card-category">
           <h3><%= @lesson.title %></h2>
-          </div>
+        </div>
           <div class="lesson-booking-card-description">
             <!-- <div class="info-form"> -->
               <%= @lesson.description %>
@@ -25,21 +25,24 @@
             <div class='lesson-booking-card-price'>
               <p><%= "DKK #{@lesson.price} per hour" %></p>
             </div>
-          </div>
-        </div>
-        <div class="col-xs-12 col-md-4">
-          <div class="booking-form">
-            <div class="form-wrapper input-text">
-              <%= simple_form_for([@lesson, @booking])  do |f| %>
-              <div class="form-title">
-                <%= f.input :booking_time, label: "Select A Lesson Time" %>
-              </div>
-              <div id="book" class="form-button">
+      </div>
+    </div>
+          <!-- </div> -->
+          <div class="col-xs-12 col-md-4">
+            <!-- <div class="booking-form"> -->
+              <div class="form-wrapper input-text">
+                <%= simple_form_for([@lesson, @booking])  do |f| %>
+                <div class="form-title">
+                  <%= f.input :booking_time, label: "Select A Lesson Time" %>
+                </div>
+                <div id="book" class="form-button">
 
-                <%= f.submit 'Book Now', class: "btn btn-danger booking-btn", :onclick => 'alert("Booking Successful! View all bookings in my dashboard")' %>
-
+                  <%= f.submit 'Book Now', class: "btn btn-danger booking-btn", :onclick => 'alert("Booking Successful! View all bookings in my dashboard")' %>
+                  <% end %>
+                </div>
               </div>
-              <% end %>
-            </div>
           </div>
-        </div>
+    </div>
+  </div>
+</div>
+

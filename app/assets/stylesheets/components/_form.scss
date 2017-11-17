@@ -1,22 +1,20 @@
 .form-wrapper {
   color: black;
   background-color: #ecf0f1;
-  padding: 70px 65px 90px 70px;
+  // padding: 70px 65px 90px 70px;
+  padding: 37px 20px 65px 20px;
+  height: 100%;
+  width: 100%;
   border-radius: 5px;
   box-shadow: 4px 4px 4px 4px #7f8c8d;
-  margin: 64px 5px 48px 8px;
-  input{
+  // margin: 64px 5px 48px 8px;
+  input, select, textarea {
     color: #363636;
   }
-  select {
-    color: #363636;
-  }
-  input {
-    color: #363636;
-  }
-  textarea {
-   color: #363636
-  }
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 20px;
 }
 
 .signup-content h2 {

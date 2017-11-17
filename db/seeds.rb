@@ -31,6 +31,7 @@ User.create(email:"ashlee@gmail.com", password:"123456", first_name:"Ashlee", la
 ]
 
 lessons = [
+
 Lesson.new(description:"Learn to play guitar, and become the musician you've always wanted to be! In these fun and informative lessons, you'll build basic guitar skills step-by-step with the help of hands-on exercises, audio and video recordings, and detailed illustrations. First, you'll get to know all the parts of your guitar, from frets to strings, and learn how to tune your instrument. After that, you'll explore the fundamentals of music notation and find out how to produce clear, beautiful notes and chords. You'll also discover how to control your rhythm, tempo, and volume, and how to express yourself artistically. The classical guitar skills you'll master in this course will allow you to play any style of music, from hard rock to country-and-western. And that's not all! Good guitar players know that the secret to making beautiful music is to practice, practice, practice—so that's what you'll do. You'll make rapid progress as you follow a carefully planned practice schedule that reinforces each new skill you learn. Whether you're a beginner or an intermediate student, this course will take your musical talent to the next level. By the time you're finished, you'll be well on your way to becoming a skilled guitar player.", location:"Amaliegade 25, 1256 Kbh", category:"school", price:470, title:"Edward's Guitar Class"),
 Lesson.new(description:"Join Bob's Drum lesson. Been playing piano for over 10 years and love making awesome shit", location:"Ahornsgade 15, 2200 Kbh", category:"school", price:120, title:"Join Bob's Drum lesson"),
 Lesson.new(description:"Join Nick's Piano lesson. Been playing piano for over 10 years and love making awesome shit", location:"Gulbergsgade 25, 2200 Kbh", category:"school", price:310, title:"Join Nick's Piano lesson"),
@@ -41,6 +42,7 @@ Lesson.new(description:"Join Harry Potter's Wand Class. Been playing piano for o
 Lesson.new(description:"Join Harry Potter's Wand Class. Been playing piano for over 10 years and love making awesome shit", location:"Suensonsgade 22, 1322 København K", category:"coding", price:79, title:"Phython Rocks"),
 Lesson.new(description:"Join Harry Potter's Wand Class. Been playing piano for over 10 years and love making awesome shit", location:"Strandgade, 1401 København", category:"coding", price:90, title:"Make Awesome shit with JavaScript"),
 Lesson.new(description:"Join Harry Potter's Wand Class. Been playing piano for over 10 years and love making awesome shit", location:"Havnegade 35, 1058 København K", category:"coding", price:108, title:"Learn to make IOS Apps")
+
 ]
 
 lessons.each do |lesson|
@@ -251,7 +253,6 @@ new_booking.save
 # new_booking.lesson = Lesson.last
 # new_booking.user = User.last
 # new_booking.save
-
 
 
 

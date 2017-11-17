@@ -1,9 +1,17 @@
+
+  <div id="image-banner" class="booking-banner" style="background-image: linear-gradient(-225deg, rgba(0,101,168,0.6) 0%, rgba(0,36,61,0.6) 50%), url('<%= image_path "dashboard_banner.png" %>');">
+  <div class="banner-content">
+    <h1>My Dashboard</h1>
+    <p>View all your classes and lessons</p>
+  </div>
+</div>
+
 <div class="dashboard-wrapper">
   <div class="booking_columns">
     <div class="column-header">
     </div>
     <div class="accepted-column">
-      <% @accepted_bookings.each do  |booking| %>
+      <% @accepted_bookings.each do |booking| %>
         <% if booking.lesson.category == "school" %>
           <% bg_path = image_path 'school.png' %>
         <% elsif booking.lesson.category == "coding" %>
@@ -18,7 +26,7 @@
     <div class="column-header">
     </div>
     <div class="pending-column">
-      <% @pending_bookings.each do  |booking| %>
+      <% @pending_bookings.each do |booking| %>
         <% if booking.lesson.category == "school" %>
             <% bg_path = image_path 'school.png' %>
         <% elsif booking.lesson.category == "coding" %>
@@ -33,7 +41,7 @@
     <div class="column-header">
     </div>
     <div class="declined-column">
-      <% @declined_bookings.each do  |booking| %>
+      <% @declined_bookings.each do |booking| %>
         <% if booking.lesson.category == "school" %>
             <% bg_path = image_path 'school.png' %>
         <% elsif booking.lesson.category == "coding" %>
@@ -46,14 +54,4 @@
     </div>
   </div>
 </div>
-
-
-
-
-
-
-
-
-          <!-- <img class="card-user" src="https://kitt.lewagon.com/placeholder/users/tgenaitay">
-            <a class="card-link" href="#" ></a> -->
 

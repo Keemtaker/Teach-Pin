@@ -1,50 +1,50 @@
 <div class="dashboard-wrapper">
-<div class="booking_columns">
-  <div class="column-header">
-  </div>
-  <div class="accepted-column">
-    <% @accepted_bookings.each do  |booking| %>
-      <% if booking.lesson.category == "school" %>
-        <% bg_path = image_path 'school.png' %>
-      <% elsif booking.lesson.category == "coding" %>
-        <% bg_path = image_path 'coding.png' %>
-      <% elsif booking.lesson.category == "arts" %>
-        <% bg_path = image_path 'arts.png'  %>
-      <% end %>
+  <div class="booking_columns">
+    <div class="column-header">
+    </div>
+    <div class="accepted-column">
+      <% @accepted_bookings.each do  |booking| %>
+        <% if booking.lesson.category == "school" %>
+          <% bg_path = image_path 'school.png' %>
+        <% elsif booking.lesson.category == "coding" %>
+          <% bg_path = image_path 'coding.png' %>
+        <% elsif booking.lesson.category == "arts" %>
+          <% bg_path = image_path 'arts.png'  %>
+        <% end %>
       <%= render partial: 'bookings_column', locals:{booking: booking, bg_path: bg_path} %>
-    <% end %>
-  </div>
+      <% end %>
+    </div>
 
-  <div class="column-header">
-  </div>
-  <div class="pending-column">
-    <% @pending_bookings.each do  |booking| %>
-      <% if booking.lesson.category == "school" %>
-        <% bg_path = image_path 'school.png' %>
-      <% elsif booking.lesson.category == "coding" %>
-        <% bg_path = image_path 'coding.png' %>
-      <% elsif booking.lesson.category == "arts" %>
-        <% bg_path = image_path 'arts.png'  %>
-      <% end %>
+    <div class="column-header">
+    </div>
+    <div class="pending-column">
+      <% @pending_bookings.each do  |booking| %>
+        <% if booking.lesson.category == "school" %>
+            <% bg_path = image_path 'school.png' %>
+        <% elsif booking.lesson.category == "coding" %>
+           <% bg_path = image_path 'coding.png' %>
+        <% elsif booking.lesson.category == "arts" %>
+           <% bg_path = image_path 'arts.png'  %>
+        <% end %>
       <%= render partial: 'bookings_column', locals:{booking: booking, bg_path: bg_path} %>
-    <% end %>
-  </div>
+      <% end %>
+    </div>
 
-  <div class="column-header">
-  </div>
-  <div class="declined-column">
-    <% @declined_bookings.each do  |booking| %>
-      <% if booking.lesson.category == "school" %>
-        <% bg_path = image_path 'school.png' %>
-      <% elsif booking.lesson.category == "coding" %>
-        <% bg_path = image_path 'coding.png' %>
-      <% elsif booking.lesson.category == "arts" %>
-        <% bg_path = image_path 'arts.png'  %>
-      <% end %>
+    <div class="column-header">
+    </div>
+    <div class="declined-column">
+      <% @declined_bookings.each do  |booking| %>
+        <% if booking.lesson.category == "school" %>
+            <% bg_path = image_path 'school.png' %>
+        <% elsif booking.lesson.category == "coding" %>
+            <% bg_path = image_path 'coding.png' %>
+        <% elsif booking.lesson.category == "arts" %>
+            <% bg_path = image_path 'arts.png'  %>
+        <% end %>
       <%= render partial: 'bookings_column', locals:{booking: booking, bg_path: bg_path} %>
-    <% end %>
+      <% end %>
+    </div>
   </div>
-</div>
 </div>
 
 

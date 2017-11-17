@@ -5,7 +5,8 @@ class BookingsController < ApplicationController
     @booking = Booking.new(booking_params)
     @booking.lesson = @lesson
     @booking.user = current_user
-    @booking.save
+    @booking.status = 'pending'
+    @booking.save!
     redirect_to lesson_path(@lesson)
   end
 

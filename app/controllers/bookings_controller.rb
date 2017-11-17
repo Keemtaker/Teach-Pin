@@ -6,7 +6,7 @@ class BookingsController < ApplicationController
     @booking.lesson = @lesson
     @booking.user = current_user
     @booking.status = 'pending'
-    @booking.save!
+    @booking.save
     redirect_to lesson_path(@lesson)
   end
 

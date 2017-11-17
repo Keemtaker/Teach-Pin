@@ -1,4 +1,5 @@
 
+
 <div class="booking-banner" style="background-image: linear-gradient(-225deg, rgba(0,101,168,0.6) 0%, rgba(0,36,61,0.6) 50%), url('<%= image_path "book.jpeg" %>');">
   <div class="banner-content">
     <h1>Book a <%= @lesson.category %> lesson</h1>
@@ -33,11 +34,11 @@
               <div class="form-title">
                 <%= f.input :booking_time, label: "Select A Lesson Time" %>
               </div>
-              <div class="form-button">
-                <%= f.submit 'Book Now', class: "btn btn-danger booking-btn" %>
+              <div id="book" class="form-button">
+                <%= f.submit 'Book Now', class: "btn btn-danger booking-btn" :onclick => 'alert("Booking Successful. View all bookings in my dashboard")' %>
+
               </div>
               <% end %>
             </div>
           </div>
         </div>
-

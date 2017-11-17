@@ -41,8 +41,12 @@ Lesson.new(description:"Join Harry Potter's Wand Class. Been playing piano for o
 Lesson.new(description:"Join Harry Potter's Wand Class. Been playing piano for over 10 years and love making awesome shit", location:"Elsdyrsgade 19, 1324 København K", category:"coding", price:89, title:"Ruby is Awesome"),
 Lesson.new(description:"Join Harry Potter's Wand Class. Been playing piano for over 10 years and love making awesome shit", location:"Suensonsgade 22, 1322 København K", category:"coding", price:79, title:"Phython Rocks"),
 Lesson.new(description:"Join Harry Potter's Wand Class. Been playing piano for over 10 years and love making awesome shit", location:"Strandgade, 1401 København", category:"coding", price:90, title:"Make Awesome shit with JavaScript"),
-Lesson.new(description:"Join Harry Potter's Wand Class. Been playing piano for over 10 years and love making awesome shit", location:"Havnegade 35, 1058 København K", category:"coding", price:108, title:"Learn to make IOS Apps")
-
+Lesson.new(description:"Join Harry Potter's Wand Class. Been playing piano for over 10 years and love making awesome shit", location:"Havnegade 35, 1058 København K", category:"coding", price:108, title:"Learn to make IOS Apps"),
+# ARTS
+Lesson.new(description:"Join Harry Potter's Wand Class. Been playing piano for over 10 years and love making awesome shit", location:"Elsdyrsgade 19, 1324 København K", category:"arts", price:108, title:"Learn Photography"),
+Lesson.new(description:"Join Harry Potter's Wand Class. Been playing piano for over 10 years and love making awesome shit", location:"Sankt Hans Gade 1, 2200 Kbh", category:"arts", price:99, title:"Learn Arts and Crafts"),
+Lesson.new(description:"Join Harry Potter's Wand Class. Been playing piano for over 10 years and love making awesome shit", location:"Hellerupvej 25, 2900 Hellerup", category:"arts", price:69, title:"Learn how to create Jewlery"),
+Lesson.new(description:"Join Harry Potter's Wand Class. Been playing piano for over 10 years and love making awesome shit", location:"Havnegade 35, 1058 København K", category:"arts", price:1200, title:"Learn how to create watches")
 ]
 
 lessons.each do |lesson|

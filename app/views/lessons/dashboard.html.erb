@@ -8,8 +8,7 @@
 
 <div class="dashboard-wrapper">
   <div class="booking_columns">
-    <div class="column-header">
-    </div>
+
     <div class="accepted-column">
       <% @accepted_bookings.each do |booking| %>
         <% if booking.lesson.category == "school" %>
@@ -23,8 +22,7 @@
       <% end %>
     </div>
 
-    <div class="column-header">
-    </div>
+
     <div class="pending-column">
       <% @pending_bookings.each do |booking| %>
         <% if booking.lesson.category == "school" %>
@@ -38,8 +36,7 @@
       <% end %>
     </div>
 
-    <div class="column-header">
-    </div>
+
     <div class="declined-column">
       <% @declined_bookings.each do |booking| %>
         <% if booking.lesson.category == "school" %>
@@ -54,4 +51,3 @@
     </div>
   </div>
 </div>
-

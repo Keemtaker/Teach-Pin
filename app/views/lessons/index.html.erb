@@ -23,11 +23,11 @@
           </div>
           <div class="card-user">
             <% if lesson.category == "school" %>
-            <img class="card-user" src="https://kitt.lewagon.com/placeholder/users/mobajo">
+            <img class="card-user" src="https://kitt.lewagon.com/placeholder/users/<%= %w[mobajo  jeremyboom8 hmatringe].sample %>">
             <% elsif lesson.category == "coding" %>
-            <img class="card-user" src="https://kitt.lewagon.com/placeholder/users/ashleeste">
+            <img class="card-user" src="https://kitt.lewagon.com/placeholder/users/<%= %w[atmosfeer ashleeste keemtaker ].sample %>">
             <% elsif lesson.category == "arts" %>
-          <img class="card-user" src="https://kitt.lewagon.com/placeholder/users/jeremyboom8">
+          <img class="card-user" src="https://kitt.lewagon.com/placeholder/users/<%= %w[ssaunier bobbymitchell].sample %>">
           <% end %>
           </div>
           <a class="card-link" href="<%= lesson_path(lesson) %>" ></a>
